@@ -3,6 +3,7 @@ import React, { useState } from "react";
 
 const Login = (props) => {
   const { push } = props.history
+
   const initialFormValues = {
     username: '',
     password: ''
@@ -14,6 +15,7 @@ const Login = (props) => {
   
   const handleChange = e => {
     setFormValues({
+      ...formValues,
       [e.target.name] : e.target.value
     })
   }
